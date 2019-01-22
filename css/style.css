@@ -1,32 +1,38 @@
 @charset 'utf-8';
+/*@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');*/
+body{font: 1em 'Malgun Gothic',Arial,sans-serif;}
 #fullpage{width: 100%;height: 100%;}
-#navTop{position: fixed;height: 100px;background: rgba(255,255,255,1);width: 100%;z-index:1;border-bottom: 5px solid #2e271f;}
+/*gnb menu*/
+#navTop{_display: none;position: fixed;width: 350px;top: 0;height: 100%;background: rgba(242,225,216,1);_width: 100%;z-index:1;border-right: 5px solid #bf3124;}
 #navTop:after{content:"";display: block;clear: both;}
-#navTop > h1{float: left;padding: 20px 50px;}
-#navTop > ul:after{content:"";display: block;clear: both;}
-#navTop > ul{float: right;}
-#navTop > ul > li{float: left;}
-#navTop > ul > li > a{display: block;line-height: 100px;text-align: center;padding: 0 10px;}
+#navTop > h1{text-align: center;margin-top: 30px;}
 
-#navTop > ul > li.active{background: lightpink;}
+#btn-open{position: absolute;top: 15px;left: 15px;_background-color: #fff;z-index:1;}
+
+#navTop > ul:after{content:"";display: block;clear: both;}
+#navTop > ul{width: 250px;_height: 100px;margin: 0 auto;}
+#navTop > ul > li{height: 50px;line-height: 50px;}
+#navTop > ul > li > a{display: block;line-height: 50px;text-align: center;padding: 0 10px;}
+#navTop > ul > li > a:hover{color: #bf3124;}
+#navTop > ul > li.active{border-bottom: 1px solid #bf3124;}
 #navTop > ul > li.active a{color: #000;}
 
 #page0{background-image: url(../images/main-fslide0.jpg);}
 /*#page2{background-color: #b5aaa4;}
 #page3{background-color: #405c71;}*/
-#page1{background-image: url(../images/main-fslide111.jpg);}
+#page1{background-image: url(../images/main-fslide111.jpg);opacity: .8;}
 #page4{background-image: url(../images/main-fslide02.jpg);}
 #page5{background-image: url(../images/main-fslide03.jpg);}
 #page2,#page3,#page6{background-color: #fff;}
 #page2 a,#page3 a,#page6 a{display: block;text-align: center;width: 150px;border: 1px solid #fff;background-color: #bf3124;color: #fff;
 -ms-border-radius: 10px;border-radius: 10px;margin-top: 30px;line-height: 45px;transition:.3s} 
 #page2 a:hover,#page3 a:hover,#page6 a:hover{border: 1px solid #bf3124;color: #bf3124;background: none;}
-.pages{width: 100%;height: 100%;background-repeat:no-repeat;background-position: center top;	background-size: cover;}
+.pages{width: 100%;height: 100%;background-repeat:no-repeat;background-position: center top;background-size: cover;}
 
 
 
 .main_cmt{width: 100%;margin-left: 100px;}
-.main_cmt p{text-shadow:2px 1px 9px #292929;color: #fff;font-weight: bold;}
+.main_cmt p{text-shadow:1px 1px 3px #292929;color: #fff;font-weight: bold;}
 .main_cmt p:nth-child(1){font-size: 2em;}
 .main_cmt p:nth-child(2){font-size: 1em;}
 .main_cmt a{display: block;text-align: center;width: 150px;border: 1px solid #fff;background: none;color: #fff;
@@ -38,23 +44,22 @@
 .slide .img-content{width: 100%;margin: 0 auto;}
 .slide .main_cmt{margin-left: 0;position: relative;}
 .slide .bg-wrap{position: absolute;top: 0;_top: 100%;left: 50%;width: 50%;height: 100%;background:url(../images/common/bg_opbox.png) repeat;}
-.slide .main_cmt .text-info{width: 100%;position: absolute;top: 50%;right: 25%;line-height: 60px;}
+.slide .main_cmt .text-info{width: 100%;position: absolute;top: 30%;right: 25%;line-height: 60px;}
 .slide .main_cmt .text-info p{text-align: right;}
 .slide .main_cmt .text-info a{position: absolute;right: 0;bottom: -90px;}
 /*slide_pager*/
-#fp-nav ul li a span, .fp-slidesNav ul li a span {
-    border-radius: 50%;
-    position: absolute;
-    z-index: 1;
-    height: 10px;
-    width: 10px;
-    border: 0;
-    background: #bf3124;
-    left: 50%;
-    top: 50%;
-    margin: -2px 0 0 -2px;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
-}
+
+/*page1_OsakaInfo*/
+#page1 .onview{text-align: center;background:url(../images/common/bg_opbox.png) repeat;_height: 200px;}
+#page1 .onview h2{font-size: 3em;color: #fff;text-shadow:2px 1px 1px #f00;font-weight: bold;margin-bottom: 20px;}
+#page1 .onview p{font-weight: normal;line-height: 30px;}
+#page1 .onview p small{}
+
+#page2 .p2-tit-wrap{margin: 0 auto;width: 500px;height: 300px;background:url(../images/tour-tit-img.jpg) 0 0 no-repeat;}
+#page2 h2{width: 250px;height: 100px;line-height: 100px;_text-shadow:2px 1px 1px #292929;background-color: #fff;color: #000;text-align: center;font-weight: bold;margin-bottom: 30px;}
+#page2 ul{width: 1260px;margin: 0 auto;}
+#page2 ul.ft-txt:after{content:"";display: block;clear: both;}
+#page2 ul.ft-txt li{text-align: center;float: left;}
+#page2 ul.ft-txt li h3{font-weight: bold;font-size: 2em;}
+#page2 ul.ft-txt li{padding:0 20px;}
+#page2 ul.ft-txt li p{text-shadow: none;color: #000;font-weight: normal;}
