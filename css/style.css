@@ -3,7 +3,6 @@
 #navTop{position: fixed;height: 100px;background: rgba(255,255,255,1);width: 100%;z-index:1;border-bottom: 5px solid #2e271f;}
 #navTop:after{content:"";display: block;clear: both;}
 #navTop > h1{float: left;padding: 20px 50px;}
-#navTop > ul{margin-left: 20px;float: right;min-width: 300px;margin-right: 35%;transform:translateY(-50%,-50%);}
 #navTop > ul:after{content:"";display: block;clear: both;}
 #navTop > ul > li{float: left;}
 #navTop > ul > li > a{display: block;line-height: 100px;text-align: center;padding: 0 10px;}
@@ -25,7 +24,7 @@
 
 
 
-.main_cmt{width: 400px;margin-left: 100px;}
+.main_cmt{width: 100%;margin-left: 100px;}
 .main_cmt p{text-shadow:2px 1px 9px #292929;color: #fff;font-weight: bold;}
 .main_cmt p:nth-child(1){font-size: 3em;}
 .main_cmt p:nth-child(2){font-size: 2em;}
@@ -38,6 +37,8 @@
 .slide .img-content{width: 100%;margin: 0 auto;}
 .slide .main_cmt{margin-left: 0;position: relative;}
 .slide .bg-wrap{position: absolute;top: 0;_top: 100%;left: 50%;width: 50%;height: 100%;background:url(../images/common/bg_opbox.png) repeat;}
-.slide .main_cmt .text-info{width: 100%;text-align: left;line-height: 60px;}
-.slide .main_cmt .text-info-2{posi`tion: absolute;top: 302px;left: 320px;width: 590px;}
-.slide .main_cmt .text-info-2 p:first-child{text-shadow: 2px 1px 8px #292929;color: #fff !important;font-weight: bold;}
+.slide .main_cmt .text-info{width: 100%;position: absolute;top: 50%;right: 25%;line-height: 60px;transform: translateY(-50%);}
+.slide .main_cmt .text-info p{text-align: right;}
+.slide .main_cmt .text-info a{position: absolute;right: 0;bottom: -90px;}
+/*.slide .main_cmt .text-info-2{_position: absolute;top: 302px;left: 320px;width: 590px;}
+.slide .main_cmt .text-info-2 p:first-child{text-shadow: 2px 1px 8px #292929;color: #fff !important;font-weight: bold;}*/
