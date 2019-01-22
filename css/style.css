@@ -4,6 +4,7 @@
 #navTop:after{content:"";display: block;clear: both;}
 #navTop > h1{float: left;padding: 20px 50px;}
 #navTop > ul:after{content:"";display: block;clear: both;}
+#navTop > ul{float: right;}
 #navTop > ul > li{float: left;}
 #navTop > ul > li > a{display: block;line-height: 100px;text-align: center;padding: 0 10px;}
 
@@ -37,8 +38,23 @@
 .slide .img-content{width: 100%;margin: 0 auto;}
 .slide .main_cmt{margin-left: 0;position: relative;}
 .slide .bg-wrap{position: absolute;top: 0;_top: 100%;left: 50%;width: 50%;height: 100%;background:url(../images/common/bg_opbox.png) repeat;}
-.slide .main_cmt .text-info{width: 100%;position: absolute;top: 50%;right: 25%;line-height: 60px;transform: translateY(-50%);}
+.slide .main_cmt .text-info{width: 100%;position: absolute;top: 50%;right: 25%;line-height: 60px;}
 .slide .main_cmt .text-info p{text-align: right;}
 .slide .main_cmt .text-info a{position: absolute;right: 0;bottom: -90px;}
-/*.slide .main_cmt .text-info-2{_position: absolute;top: 302px;left: 320px;width: 590px;}
-.slide .main_cmt .text-info-2 p:first-child{text-shadow: 2px 1px 8px #292929;color: #fff !important;font-weight: bold;}*/
+/*slide_pager*/
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    height: 10px;
+    width: 10px;
+    border: 0;
+    background: #bf3124;
+    left: 50%;
+    top: 50%;
+    margin: -2px 0 0 -2px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}

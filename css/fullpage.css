@@ -166,10 +166,10 @@ html.fp-enabled,
     border-radius: 50%;
     position: absolute;
     z-index: 1;
-    height: 4px;
-    width: 4px;
+    height: 10px;
+    width: 10px;
     border: 0;
-    background: #333;
+    background: #bf3124;
     left: 50%;
     top: 50%;
     margin: -2px 0 0 -2px;
@@ -180,8 +180,8 @@ html.fp-enabled,
 }
 #fp-nav ul li:hover a span,
 .fp-slidesNav ul li:hover a span{
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     margin: -5px 0px 0px -5px;
 }
 #fp-nav ul li .fp-tooltip {
