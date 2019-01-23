@@ -7,7 +7,7 @@ body{font: 1em 'Malgun Gothic',Arial,sans-serif;}
 #navTop:after{content:"";display: block;clear: both;}
 #navTop > h1{text-align: center;margin-top: 30px;}
 
-#btn-open{position: absolute;top: 15px;left: 15px;_background-color: #fff;z-index:1;}
+#btn-open{position: absolute;top: 15px;left:300px;_background-color: #fff;z-index:100;}
 
 #navTop > ul:after{content:"";display: block;clear: both;}
 #navTop > ul{width: 250px;_height: 100px;margin: 0 auto;}
