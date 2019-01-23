@@ -3,19 +3,39 @@
 body{font: 1em 'Malgun Gothic',Arial,sans-serif;}
 #fullpage{width: 100%;height: 100%;}
 /*gnb menu*/
-#navTop{_display: none;position: fixed;width: 350px;top: 0;height: 100%;background: rgba(242,225,216,1);_width: 100%;z-index:1;border-right: 5px solid #bf3124;}
+#navTop{_display: none;position: fixed;width: 350px;top: 0;left: -290px;height: 100%;background: rgba(191,49,36,1);_width: 100%;z-index:1;border-right: 5px solid #bf3124;}
 #navTop:after{content:"";display: block;clear: both;}
-#navTop > h1{text-align: center;margin-top: 30px;}
+#navTop > h1{text-align: center;margin:30px 0 50px 0;}
+/*menu side btn*/
+.btn-open{position: absolute;top: 15px;left:305px;_background-color: #fff;z-index:100; display: inline-block;
+ cursor: pointer;}
+ .bar1, .bar2, .bar3 {
+  width: 20px;
+  height: 1px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
 
-#btn-open{position: absolute;top: 15px;left:300px;_background-color: #fff;z-index:100;}
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 10px);
+  transform: rotate(-45deg) translate(-5px, 10px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(0px, -5px);
+  transform: rotate(45deg) translate(0px, -5px);
+}
 
 #navTop > ul:after{content:"";display: block;clear: both;}
-#navTop > ul{width: 250px;_height: 100px;margin: 0 auto;}
+#navTop > ul{width: 230px;_height: 100px;margin: 0 auto;}
 #navTop > ul > li{height: 50px;line-height: 50px;}
-#navTop > ul > li > a{display: block;line-height: 50px;text-align: center;padding: 0 10px;}
-#navTop > ul > li > a:hover{color: #bf3124;}
-#navTop > ul > li.active{border-bottom: 1px solid #bf3124;}
-#navTop > ul > li.active a{color: #000;}
+#navTop > ul > li > a{display: block;line-height: 50px;color: #fff;text-align: center;padding: 0 10px;}
+/*#navTop > ul > li > a:hover{color: #FFF6B4;}*/
+#navTop > ul > li.active{border-bottom: 1px solid #fff;}
+#navTop > ul > li.active a{color: #fff;}
 
 #page0{background-image: url(../images/main-fslide0.jpg);}
 /*#page2{background-color: #b5aaa4;}
