@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/reset.css">
+	<title>slide image</title>
+	<style>
+		#gallery{width: 964px;height: 570px;margin: 30px auto;background-color: #bf3124;border-radius:5px;}
+		#gallery:after{content:"";display: block;clear: both;}
+		#image{float: left;width: 760px;height: 470px;margin: 30px auto;padding: 20px 0 20px 30px;}
+		#image p{display: none;}
+		#image p img{width: 760px;height: 470px;}
+		#thumbnail .container{_margin-top: 30px;width: 120px;height:475px;overflow: hidden;position: relative;}
+		#thumbnail{float: right;width: 120px;height: 480px;margin: 50px 30px 50px 0;position: relative;}
+		
+		#thumbnail .prev{_display: none;position: absolute;top: -36px;right: 36px;font-weight: bold;}
+		#thumbnail .next{_display: none;position: absolute;bottom: -27px;right: 36px;font-weight: bold;}
+		
+		#thumbnail ul{position: absolute;_height: px;top:0;}
+		#thumbnail ul li span{width: 100%;display: inline-block;text-align: center;font-size: 12px;}
+		#thumbnail ul li{padding-bottom: 24px;}
+		#thumbnail ul li:nth-child(5),#thumbnail ul li:last-child{padding-bottom: 0;}
+
+	</style>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(function(){
+			var current = 0;
+				var $thumbnail = $("#thumbnail");
+				var $container = $thumbnail.find(".container > ul");
+				var $thumb = $container.find(".thumb");
+				var $image = $("#gallery #image > p");
+				
+				var $prev = $thumbnail.find(".prev");
+				var $next = $thumbnail.find(".next");
+				
+				var $containerHeight = $thumbnail.find(".container").height();
+					$next.on("click",function(){
+						
+						if(current < 1) {
+							current++;
+						} else {
+							current = 0;
+						};
+						console.log(current);
+						listMove();
+					});
+
+					$prev.on("click",function(){
+						if(current > 0) {
+							current--;
+						} else {
+							current = 1;
+						};
+						console.log(current);
+						listMove();
+					});
+
+					function listMove(){
+						var tl = $containerHeight * current * -1
+						//$container.css("left",tl);
+						$container.stop().animate({top:tl});
+					};
+
+					$thumb.on("click",function(){
+						$image.css("display","none");
+						var i = $(this).index();
+						$image.eq(i).css("display","block");
+					});
+		});
+	</script>
+</head>
+<body>
+	<div id="gallery">
+		<div id="image">
+			<p style="display:block;"><img src="images/p1_slide_img01.jpg" alt="오사카이미지1"></p>
+			<p><img src="images/p1_slide_img02.jpg" alt="오사카이미지2"></p>
+			<p><img src="images/p1_slide_img03.jpg" alt="오사카이미지3"></p>
+			<p><img src="images/p1_slide_img04.jpg" alt="오사카이미지4"></p>
+			<p><img src="images/p1_slide_img05.jpg" alt="오사카이미지5"></p>
+			<p><img src="images/p1_slide_img06.jpg" alt="오사카이미지6"></p>
+			<p><img src="images/p1_slide_img07.jpg" alt="오사카이미지7"></p>
+			<p><img src="images/p1_slide_img08.jpg" alt="오사카이미지8"></p>
+			<p><img src="images/p1_slide_img09.jpg" alt="오사카이미지9"></p>
+			<p><img src="images/p1_slide_img10.jpg" alt="오사카이미지10"></p>
+		</div>
+		<div id="thumbnail">
+			<div class="prev"><a href="javascript:void(0)"><img src="images/slide-prev-arrow.png" alt="이전"></a></div>
+			<div class="container">
+				<ul>
+					<li class="thumb"><img src="images/p1_thumbnail01.jpg" alt="오사카 썸네일이미지"></li>
+					<li class="thumb"><img src="images/p1_thumbnail02.jpg" alt="오사카 썸네일이미지"></li>
+					<li class="thumb"><img src="images/p1_thumbnail03.jpg" alt="오사카 썸네일이미지"></li>
+					<li class="thumb"><img src="images/p1_thumbnail04.jpg" alt="오사카 썸네일이미지"></li>
+					<li class="thumb"><img src="images/p1_thumbnail05.jpg" alt="오사카 썸네일이미지"></li>
+					<li class="thumb"><img src="images/p1_thumbnail06.jpg" alt="오사카 썸네일이미지"></li>
+					<li class="thumb"><img src="images/p1_thumbnail07.jpg" alt="오사카 썸네일이미지"></li>
+					<li class="thumb"><img src="images/p1_thumbnail08.jpg" alt="오사카 썸네일이미지"></li>
+					<li class="thumb"><img src="images/p1_thumbnail09.jpg" alt="오사카 썸네일이미지"></li>
+					<li class="thumb"><img src="images/p1_thumbnail10.jpg" alt="오사카 썸네일이미지"></li>
+				</ul>
+			</div>
+			<div class="next"><a href="javascript:void(0)"><img src="images/slide-next-arrow.png" alt="이전"></a></div>
+		</div>
+	</div>
+</body>
+</html>

@@ -8,54 +8,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>김하늘</title><!-- Osaka info | 오사카인포 -->
   <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/fullpage.css">
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery.fullpage.js"></script>
-	<script>
-		$(document).ready(function(){
-			$("#fullpage").fullpage({
-				anchor:["1st","2st","3st","4st","5st","6st"],
-				menu:"#topMenu",
-				// navigation:true
-				'afterLoad':function(anchorsLink,index){
-					console.log(index);
-						if (index == 2){
-								$(".onview").addClass("mactive");
-						} else {
-								$(".onview").removeClass("mactive");
-						}
-				}
-
-			});
-			var num = 0;
-			var num1 = 0;
-			$(".btn-open").click(function(){
-				
-				if (num == 0) {
-					$("#navTop").animate({left:0});
-					
-					num = 1;
-				}else{
-					$("#navTop").animate({left:-290});
-					num = 0;
-				}
-			});
-
-
-			$(".btn-open").click(function(){
-				if(num1 == 0){
-					$(this).addClass("change");	
-					num1 = 1;
-				}else{
-					$(this).removeClass("change");
-					num1 = 0;
-				}
-
-			});
-
-		});
-	</script>
+	<script src="js/main.js"></script>
  </head>
  <body>
  	<nav id="navTop">
@@ -72,9 +30,8 @@
 			</li>
 			<li data-menuanchor="2st"><a href="#2st">관광안내</a></li>
 			<li data-menuanchor="3st"><a href="#3st">숙박예약 </a></li>
-			<li data-menuanchor="4st"><a href="#4st">쇼핑안내 </a></li>
-			<li data-menuanchor="5st"><a href="#5st">맛집안내</a></li>
-			<li data-menuanchor="6st"><a href="#6st">Help Desk</a></li>
+			<li data-menuanchor="4st"><a href="#4st">쇼핑&middot;맛집 안내 </a></li>
+			<li data-menuanchor="5st"><a href="#5st">Help Desk</a></li>
 		</ul>
 	</nav>
   <div id="fullpage">
@@ -121,40 +78,94 @@
 		<div class="section pages" id="page1" data-anchor="1st">
 			<div class="main_cmt">
 				<div class="onview">
-					<h2>오사카정보</h2>
-					<p>오사카 여행을 보다 깊게 안내합니다.</p>
-					<p>안녕하세요. OSAKA-INFO.KR 오사카관광지도 입니다.<br>오사카정보 페이지에서는 오사카소개/오사카역사/오사카날씨/최신정보를 제공합니다.</p>
-					<p><small>*오사카인포.KR은 일본 정부에서 추천하는 공식 오사카 관광 사이트입니다.오사카시청/일본관광청에서 추천하는 사이트입니다.</small></p>
+					<div class="p1-tit-wrap">
+						<h2>오사카정보</h2>
+						<p>오사카 여행을 보다 깊게 안내합니다.</p>
+						<p>안녕하세요. OSAKA-INFO.KR 오사카관광지도 입니다.<br>오사카정보 페이지에서는 오사카소개/오사카역사/오사카날씨/최신정보를 제공합니다.</p>
+					</div>
+				<ul class="list-wrap">
+					<li class="list-box"><a href="javascript:void(0)">오사카소개</a></li>
+					<li class="list-box"><a href="javascript:void(0)">왜 오사카 여행일까?</a></li>
+					<li class="list-box"><a href="javascript:void(0)">오사카 관광지도</a></li>
+					<li class="list-box"><a href="javascript:void(0)">2019 오사카 축제안내 </a></li>
+					<li class="list-box"><a href="javascript:void(0)">오사카 날씨</a></li>
+				</ul>
 				</div>
 			</div>
+			<div id="gallery">
+				<div id="image">
+					<p style="display:block;"><img src="images/p1_slide_img01.jpg" alt="오사카이미지1"></p>
+					<p><img src="images/p1_slide_img02.jpg" alt="오사카이미지2"></p>
+					<p><img src="images/p1_slide_img03.jpg" alt="오사카이미지3"></p>
+					<p><img src="images/p1_slide_img04.jpg" alt="오사카이미지4"></p>
+					<p><img src="images/p1_slide_img05.jpg" alt="오사카이미지5"></p>
+					<p><img src="images/p1_slide_img06.jpg" alt="오사카이미지6"></p>
+					<p><img src="images/p1_slide_img07.jpg" alt="오사카이미지7"></p>
+					<p><img src="images/p1_slide_img08.jpg" alt="오사카이미지8"></p>
+					<p><img src="images/p1_slide_img09.jpg" alt="오사카이미지9"></p>
+					<p><img src="images/p1_slide_img10.jpg" alt="오사카이미지10"></p>
+				</div>
+			<div id="thumbnail">
+				<div class="prev"><a href="javascript:void(0)"><img src="images/slide-prev-arrow.png" alt="이전"></a></div>
+				<div class="container">
+					<ul>
+						<li class="thumb"><img src="images/p1_thumbnail01.jpg" alt="오사카 썸네일이미지"></li>
+						<li class="thumb"><img src="images/p1_thumbnail02.jpg" alt="오사카 썸네일이미지"></li>
+						<li class="thumb"><img src="images/p1_thumbnail03.jpg" alt="오사카 썸네일이미지"></li>
+						<li class="thumb"><img src="images/p1_thumbnail04.jpg" alt="오사카 썸네일이미지"></li>
+						<li class="thumb"><img src="images/p1_thumbnail05.jpg" alt="오사카 썸네일이미지"></li>
+						<li class="thumb"><img src="images/p1_thumbnail06.jpg" alt="오사카 썸네일이미지"></li>
+						<li class="thumb"><img src="images/p1_thumbnail07.jpg" alt="오사카 썸네일이미지"></li>
+						<li class="thumb"><img src="images/p1_thumbnail08.jpg" alt="오사카 썸네일이미지"></li>
+						<li class="thumb"><img src="images/p1_thumbnail09.jpg" alt="오사카 썸네일이미지"></li>
+						<li class="thumb"><img src="images/p1_thumbnail10.jpg" alt="오사카 썸네일이미지"></li>
+					</ul>
+				</div>
+				<div class="next"><a href="javascript:void(0)"><img src="images/slide-next-arrow.png" alt="이전"></a></div>
+			</div>
+			<div class="refer">
+				<p><small>*오사카인포.KR은 일본 정부에서 추천하는 공식 오사카 관광 사이트입니다.오사카시청/일본관광청에서 추천하는 사이트입니다.</small></p>
+			</div>
+		</div>
 		</div>
 		<!-- //osaka info -->
 		<!-- tour guide -->
 		<div class="section pages" id="page2" data-anchor="2st">
-			<div class="main_cmt">
-				<div class="p2-tit-wrap">
-					<p><strong>일본 자유여행</strong><br>Free Travelling in Osaka</p>
-				</div>
-				<ul class="ft-txt">
-					<li>
-						<div class="ft-txt-box">
-							<h3>오사카 여행의 목적</h3>
-							<p>고베 산노미아의 예쁜 카페골목<br> 일본 3대 온천인 효고현 아리마 온천<br>오사카 공중정원 전망대<br>일본여행 가가와현 다카마쓰,리쓰린공원<br>일본여행 교토기온거리로</p>
-						</div>
-					</li>
-					<li>
-						<div class="ft-txt-box">
-							<h3>오사카 여행을 위한 조건</h3>
-							<p>맛있는 먹거리 즐길 준비<br>시원한 경치를 구경할 준비<br>간단한 일본어 인삿말 준비<br>OSAKA-INFO.KR에서 모든 것을 안내합니다.</p>
-						</div>
-					</li>
-					<li>
-						<div class="ft-txt-box">
-							<h3>왜 오사카 여행인가?</h3>
-							<p>다양한 먹거리가 즐비한 OSAKA<br>서울/부산 기준 1시간30분의 거리로<br>주말여행으로도 GOOD~!<br>처음 방문해도 알기 쉬운 한국어 안내<br>OSAKA 여행도 OK~! </p>
-						</div>
-					</li>
+			<div class="list-outer-wrap p2_delay">
+				<ul class="list-wrap">
+						<li class="list-box"><a href="javascript:void(0)">오사카 가이드</a></li>
+						<li class="list-box"><a href="javascript:void(0)">교토 가이드</a></li>
+						<li class="list-box"><a href="javascript:void(0)">고베 가이드</a></li>
+						<li class="list-box"><a href="javascript:void(0)">나라 가이드 </a></li>
+						<li class="list-box"><a href="javascript:void(0)">그 외 지역</a></li>
 				</ul>
+			</div>
+			<div class="main_cmt">
+				<div class="p2-content-wrap">
+					<div class="p2-tit-wrap">
+						<p><strong>일본 자유여행</strong><br>Free Travelling in Osaka</p>
+					</div>
+					<ul class="ft-txt">
+						<li>
+							<div class="ft-txt-box order1">
+								<h3>오사카 여행의 목적</h3>
+								<p>고베 산노미아의 예쁜 카페골목<br> 일본 3대 온천인 효고현 아리마 온천<br>오사카 공중정원 전망대<br>일본여행 가가와현 다카마쓰,리쓰린공원<br>일본여행 교토기온거리로</p>
+							</div>
+						</li>
+						<li>
+							<div class="ft-txt-box order2">
+								<h3>오사카 여행을 위한 조건</h3>
+								<p>맛있는 먹거리 즐길 준비<br>시원한 경치를 구경할 준비<br>간단한 일본어 인삿말 준비<br>OSAKA-INFO.KR에서 모든 것을 안내합니다.</p>
+							</div>
+						</li>
+						<li>
+							<div class="ft-txt-box order3">
+								<h3>왜 오사카 여행인가?</h3>
+								<p>다양한 먹거리가 즐비한 OSAKA<br>서울/부산 기준 1시간30분의 거리로<br>주말여행으로도 GOOD~!<br>처음 방문해도 알기 쉬운 한국어 안내<br>OSAKA 여행도 OK~! </p>
+							</div>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<!-- //tour guide -->
@@ -169,7 +180,7 @@
 			</div>
 		</div>
 		<!-- //accomodation reservation -->
-		<!-- shopping info -->
+		<!-- shopping & restaurant info -->
 		<div class="section pages" id="page4" data-anchor="4st">
 			<div class="main_cmt">
 				<div class="onview">
@@ -180,7 +191,7 @@
 			</div>
 		</div>
 		<!-- //shopping info -->
-		<!-- restaurant info -->
+		<!-- help desk -->
 		<div class="section pages" id="page5" data-anchor="5st">
 			<div class="main_cmt">
 				<div class="onview">
@@ -190,18 +201,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- //restaurant info -->
-		<!-- help&desk -->
-		<div class="section pages" id="page6" data-anchor="6st">
-			<div class="main_cmt">
-				<div class="onview">
-					<p>Lorem ipsum.</p>
-					<p>Lorem ipsum dolor sit.</p>
-					<a href="#">more</a>
-				</div>
-			</div>
-		</div>
-		<!-- //help&desk -->
+		<!-- //help desk -->
 	</div>
  </body>
 </html>
