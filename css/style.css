@@ -16,7 +16,7 @@
 	#page2{background-image: url(../images/p1-back-img4.png);}
 	#page3{}
 	#page4{background-image: url(../images/p4_sr_mainbg02.jpg);}
-	#page5{background-image: url(../images/main-fslide03.jpg);}
+	#page5{background-image: url(../images/bg.jpg);}
 	#page6{background-color: #fff;}
 	#page3 a,#page6 a{display: block;text-align: center;width: 150px;border: 1px solid #fff;background-color: #bf3124;color: #fff;
 	-ms-border-radius: 10px;border-radius: 10px;margin-top: 30px;line-height: 45px;transition:.3s} 
@@ -51,7 +51,7 @@
 	#page1 .refer{position: relative;bottom: -50%;transform:translate(-50%,-50%);}
 	#page1 p small{position: absolute;bottom: -320px;right: -450px;_font-weight: bold;background:url(../images/common/bg_opbox.png) repeat;color: #fff;}
 
-	.onview > ul.list-wrap{_width: 50%;position: absolute;top:200px;left: 490px;_transform:translate(-50%,0);}
+	.onview > ul.list-wrap{_width: 50%;position: absolute;top:200px;left: 211px;_transform:translate(-50%,0);}
 	.onview > ul.list-wrap{}
 	.onview > ul.list-wrap:after{content:"";display: block;clear: both;}
 	.onview > ul.list-wrap > li{float: left;width: 175px;text-align: center;margin: 0 5px;}
@@ -78,7 +78,7 @@
 
 /*page2_tourGuide*/
 #page2 .main_cmt{margin-top: 160px;}
-	#page2 .list-outer-wrap{width:1260px;margin: 0 auto;position: absolute;top: 158px;left: 579px;}
+	#page2 .list-outer-wrap{width:1260px;margin: 0 auto;position: absolute;top: 93px;left: 330px;}
 	#page2 .list-outer-wrap > ul.list-wrap{width: 100%;_position: absolute;/*top: 193px;left: 474px;*/}
 	#page2 .list-outer-wrap> ul.list-wrap:after{content:"";display: block;clear: both;}
 	#page2 .list-outer-wrap > ul.list-wrap > li{float: left;width: 150px;_width: 20%;text-align: center;}
@@ -114,22 +114,56 @@
 
 
 /*page3 accomodation reservation*/
-#page3 .schedule-wrap{width: 1260px;margin: 0 auto;}
-.calendar-info-wrap{width: 300px;margin: 0 auto}
-.schedule-wrap #calendar-1 th, #calendar-1 td{border: 1px solid #ccc;}
-#calendar-1 {position: relative;}
-#calendar-1 .inner-calendar table{_position: relative;height: 700px;}
-#calendar-1 .inner-calendar table thead th{height:30px;text-align: center;background: #f2e1d8;}
-.schedule-wrap h4{font-size: 24px;padding-bottom: 10px;}
-.schedule-wrap .calendar-info{position: absolute;text-align: right;right: 0;top: -40px;}
-.schedule-wrap .calendar-info button{}
-.schedule-wrap .calendar-info button.btnPrev{background-color: #fff;border: none;width: 14px;height: 26px;text-indent:-9999px;background-image:  url(../images/left-arrow.png);}
-.schedule-wrap .calendar-info button.btnNext{border: none;background-color: #fff;width: 14px;height: 26px;text-indent:-9999px;background-image: url(../images/right-arrow.png);}
-.schedule-wrap .calendar-info span{font-size: 18px;vertical-align: middle;padding:0 20px;}
+	#page3 .schedule-wrap{width: 1000px;margin: 0 auto;}
+	.calendar-info-wrap{width: 300px;margin: 0 auto}
+	.schedule-wrap #calendar-1 th, #calendar-1 td{border: 1px solid #ccc;}
+	#calendar-1 {position: relative;}
+	#calendar-1 .inner-calendar table{_position: relative;height: 700px;}
+	#calendar-1 .inner-calendar table thead th{height:30px;text-align: center;background: #f2e1d8;}
+	.schedule-wrap h4{font-size: 24px;padding-bottom: 10px;}
+	.schedule-wrap .calendar-info{position: absolute;text-align: right;right: 0;top: -40px;}
+	.schedule-wrap .calendar-info button{}
+	.schedule-wrap .calendar-info button.btnPrev{background-color: #fff;border: none;width: 14px;height: 26px;text-indent:-9999px;background-image:  url(../images/left-arrow.png);}
+	.schedule-wrap .calendar-info button.btnNext{border: none;background-color: #fff;width: 14px;height: 26px;text-indent:-9999px;background-image: url(../images/right-arrow.png);}
+	.schedule-wrap .calendar-info span{font-size: 18px;vertical-align: middle;padding:0 20px;}
+
+/*circle hover*/
+	#page4{
+		
+		_background: #f9f9f9 url(../images/bg.jpg);
+		-webkit-font-smoothing: antialiased;
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+	.ch-grid {
+		margin: 20px 0 0 0;
+		padding: 0;
+		list-style: none;
+		display: block;
+		text-align: center;
+		width: 100%;
+	}
+
+	.ch-grid:after,
+	.ch-item:before {
+		content: '';
+	    display: table;
+	}
+
+	.ch-grid:after {
+		clear: both;
+	}
+
+	.ch-grid li {
+		width: 220px;
+		height: 220px;
+		display: inline-block;
+		margin: 20px;
+	}
 
 /*media query*/
 /*pc:1260px~*/
 @media screen and (max-width:1260px){
-#page1 .onview > ul.list-wrap{position: absolute;left: 163px;}
-#page2 .list-outer-wrap{position: absolute;top: 110px;left: 257px;}
+#page1 .onview > ul.list-wrap{position: absolute;left: 210px;}
+#page2 .list-outer-wrap{position: absolute;top: 93px;left: 250px;}
 }
