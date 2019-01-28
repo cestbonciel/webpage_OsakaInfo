@@ -17,6 +17,10 @@ $(document).ready(function(){
 							//$(".onview").addClass("mactive");
 							$(".list-box").addClass("fadeInUp animated");
 					} else{$(".list-box").removeClass("fadeInUp animated"); }
+					if (index == 5){
+							//$(".onview").addClass("mactive");
+							$(".p4_ft-txt").addClass("fadeInUp animated");
+					} else{$(".p4_ft-txt").removeClass("fadeInUp animated"); }
 					
 			}
 
@@ -30,21 +34,28 @@ $(document).ready(function(){
 				
 				num = 1;
 			}else{
-				$("#navTop").animate({left:-190});
+				$("#navTop").animate({left:-250});
 				num = 0;
 			}
+			
 		});
 
 
 		$(".btn-open").click(function(){
 			if(num1 == 0){
-				$(this).addClass("change");	
+				$(this).addClass("change");
+				$(this).removeClass("close");
+
+				
+
 				num1 = 1;
 			}else{
 				$(this).removeClass("change");
+				$(this).addClass("close");
+
 				num1 = 0;
 			}
-
+			//console.log(num);
 		});
 		/*p1_slider*/
 		var current = 0;
@@ -64,7 +75,7 @@ $(document).ready(function(){
 						} else {
 							current = 0;
 						};
-						console.log(current);
+						//console.log(current);
 						listMove();
 					});
 
@@ -74,7 +85,7 @@ $(document).ready(function(){
 						} else {
 							current = 1;
 						};
-						console.log(current);
+						//console.log(current);
 						listMove();
 					});
 

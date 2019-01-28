@@ -17,7 +17,7 @@
   <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css' /> -->
 		<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/jquery.fullpage.js"></script>
+	<script src="js/jquery.fullPage.js"></script>
 	<script src="js/main.js"></script>
 
  </head>
@@ -29,16 +29,18 @@
 		  <div class="bar3"></div>
 		</div>
 		<!-- <p id="btn-open"><a href="#"><img src="images/common/nav_btn.png" alt="햄버거버튼"></a></p> -->
-		<h1 data-menuanchor="0st"><a href="index.html"><img src="images/common/header-logo.png" alt="로고"></a></h1>
-		<ul id="topMenu">
-			<li><a href="index.html">Home</a></li>
-			<li data-menuanchor="1st"><a href="#1st">오사카정보</a>
-			</li>
-			<li data-menuanchor="2st"><a href="#2st">관광안내</a></li>
-			<li data-menuanchor="3st"><a href="#3st">숙박예약 </a></li>
-			<li data-menuanchor="4st"><a href="#4st">쇼핑&middot;맛집 안내 </a></li>
-			<li data-menuanchor="5st"><a href="#5st">Help Desk</a></li>
-		</ul>
+		<div class="menuWrap">		
+			<h1 data-menuanchor="0st"><a href="index.html"><img src="images/common/header-logo.png" alt="로고"></a></h1>
+			<ul id="topMenu">
+				<li><a href="index.html">Home</a></li>
+				<li data-menuanchor="1st"><a href="#1st">오사카정보</a>
+				</li>
+				<li data-menuanchor="2st"><a href="#2st">관광안내</a></li>
+				<li data-menuanchor="3st"><a href="#3st">숙박예약 </a></li>
+				<li data-menuanchor="4st"><a href="#4st">쇼핑&middot;맛집 안내 </a></li>
+				<li data-menuanchor="5st"><a href="#5st">Help Desk</a></li>
+			</ul>
+		</div>
 	</nav>
   <div id="fullpage">
 		<!-- Main-slide -->
@@ -89,13 +91,15 @@
 						<p>오사카 여행을 보다 깊게 안내합니다.</p>
 						<p>안녕하세요. OSAKA-INFO.KR 오사카관광지도 입니다.<br>오사카정보 페이지에서는 오사카소개/오사카역사/오사카날씨/최신정보를 제공합니다.</p>
 					</div>
-					<ul class="list-wrap">
-						<li class="list-box"><a href="javascript:void(0)">오사카소개</a></li>
-						<li class="list-box"><a href="javascript:void(0)">왜 오사카 여행일까?</a></li>
-						<li class="list-box"><a href="javascript:void(0)">오사카 관광지도</a></li>
-						<li class="list-box"><a href="javascript:void(0)">2019 오사카 축제안내 </a></li>
-						<li class="list-box"><a href="javascript:void(0)">오사카 날씨</a></li>
-					</ul>
+					<div class="list-outer-wrap p1_delay">
+						<ul class="list-wrap">
+							<li class="list-box"><a href="javascript:void(0)">오사카소개</a></li>
+							<li class="list-box"><a href="javascript:void(0)">왜 오사카 여행일까?</a></li>
+							<li class="list-box"><a href="javascript:void(0)">오사카 관광지도</a></li>
+							<li class="list-box"><a href="javascript:void(0)">2019 오사카 축제 </a></li>
+							<li class="list-box"><a href="javascript:void(0)">오사카 날씨</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div id="gallery">
@@ -230,7 +234,7 @@
 					</ul>
 			</section>
 			<div class="p4_content-box">
-				<ul class="p4_ft-txt">
+				<ul class="p4_ft-txt p4_delay">
 					<li>
 						<div class="p4_ft-txt-box order1">
 							<h3>백화점</h3>
@@ -251,28 +255,53 @@
 		<!-- //shopping info -->
 		<!-- help desk -->
 		<div class="section pages" id="page5" data-anchor="5st">
-			<div class="p5_list-outer-wrap p5_delay">
-				<ul class="p5_list-wrap">
-						<li class="p5_list-box"><a href="javascript:void(0)">공지사항/새소식</a></li>
-						<li class="p5_list-box"><a href="javascript:void(0)">이벤트안내</a></li>
-						<li class="p5_list-box"><a href="javascript:void(0)">자주하는 질문</a></li>
-						<li class="p5_list-box"><a href="javascript:void(0)">문의하기 </a></li>
-				</ul>
-			</div>
-			<footer id="footer">
-				<div class="footer-1">
-					오사카인포 오사카관광지도 
-					<p class="footer-1_1">copyright &copy; 2012 Japan Osaka-info.kr Tourism</p>
-				</div>
-				<div class="footer-2">
-					<ul>
-						<li><a href="#">About us</a></li>
-						<li><a href="#">Terms</a></li>
-						<li><a href="#">이용약관</a></li>
-						<li><a href="#">개인정보처리방침 </a></li>
+			<div class="p5_list-outer-wrap">
+				<div class="p5-inner-wrap">
+					<ul class="p5_list-wrap p5_delay">
+							<li class="p5_list-box"><a href="javascript:void(0)">공지사항/새소식</a></li>
+							<li class="p5_list-box"><a href="javascript:void(0)">이벤트안내</a></li>
+							<li class="p5_list-box"><a href="javascript:void(0)">자주하는 질문</a></li>
+							<li class="p5_list-box"><a href="javascript:void(0)">문의하기 </a></li>
 					</ul>
+					<div class="p5_box-wrap">
+						<div class="p5-content-box">
+							<h3>공지사항&새소식</h3>
+							<p>각종 공지사항 및 새소식은 이 곳에서 확인하세요.</p>
+						</div>
+						<div class="p5-content-box">
+							<h3>이벤트안내</h3>
+							<p>다양한 이벤트가 함께 하는 OSAKA축제 안내부터 선물 가득한 이벤트</p>
+						</div>
+						<div class="p5-content-box">
+							<h3>자주하는 질문</h3>
+							<p>OSAKA 방문객들이 가장 많이 하는 질문을 한 곳에 모아모아</p>
+						</div>
+						<div class="p5-content-box">
+							<h3>문의하기</h3>
+							<p>오사카와 관련된 문의라면 언제든 온라인 최고의 오사카 상담센터</p>
+						</div>
+					</div>
 				</div>
-			</footer>
+			</div>
+			<div class="footer-outer-wrap">
+				<footer id="footer">
+					<div class="footer-1">
+						<div class="logo-wrap">
+							<h3><a href="index.html"><img src="images/common/header-logo.png" alt="로고"></a></h3>
+						</div>
+						오사카인포 오사카관광지도 
+						<p class="footer-1_1"><small>copyright &copy; 2012 Japan Osaka-info.kr Tourism</small></p>
+					</div>
+					<div class="footer-2">
+						<ul>
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Terms</a></li>
+							<li><a href="#">이용약관</a></li>
+							<li><a href="#">개인정보처리방침 </a></li>
+						</ul>
+					</div>
+				</footer>
+			</div>
 		</div>
 		<!-- //help desk -->
 	</div>
