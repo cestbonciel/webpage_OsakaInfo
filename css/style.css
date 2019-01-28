@@ -51,7 +51,7 @@
 	#page1 .refer{position: relative;bottom: -50%;transform:translate(-50%,-50%);}
 	#page1 p small{position: absolute;bottom: -320px;right: -450px;_font-weight: bold;background:url(../images/common/bg_opbox.png) repeat;color: #fff;}
 
-	.onview > ul.list-wrap{_width: 50%;position: absolute;top:200px;left: 211px;_transform:translate(-50%,0);}
+	.onview > ul.list-wrap{_width: 50%;position: absolute;top:200px;left: 493px;_transform:translate(-50%,0);}
 	.onview > ul.list-wrap{}
 	.onview > ul.list-wrap:after{content:"";display: block;clear: both;}
 	.onview > ul.list-wrap > li{float: left;width: 175px;text-align: center;margin: 0 5px;}
@@ -78,7 +78,7 @@
 
 /*page2_tourGuide*/
 #page2 .main_cmt{margin-top: 160px;}
-	#page2 .list-outer-wrap{width:1260px;margin: 0 auto;position: absolute;top: 93px;left: 330px;}
+	#page2 .list-outer-wrap{width:1260px;margin: 0 auto;position: absolute;top: 132px;left: 575px;}
 	#page2 .list-outer-wrap > ul.list-wrap{width: 100%;_position: absolute;/*top: 193px;left: 474px;*/}
 	#page2 .list-outer-wrap> ul.list-wrap:after{content:"";display: block;clear: both;}
 	#page2 .list-outer-wrap > ul.list-wrap > li{float: left;width: 150px;_width: 20%;text-align: center;}
@@ -187,7 +187,10 @@ section.main{position: relative;}
 
 /*media query*/
 	/*pc:1260px~*/
+	@media (max-width:1260px) and (min-width:1780px){
+	.onview > ul.list-wrap{position: absolute;left:215px;}
+	}
 	@media screen and (max-width:1260px){
-	#page1 .onview > ul.list-wrap{position: absolute;left: 210px;}
-	#page2 .list-outer-wrap{position: absolute;top: 93px;left: 250px;}
+	/*#page1 .onview > ul.list-wrap{position: absolute;top: 200px;left: 221px;}*/
+	#page2 .list-outer-wrap{position: absolute;top: 93px;left: 330px;}
 	}
