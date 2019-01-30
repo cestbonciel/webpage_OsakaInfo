@@ -15,7 +15,7 @@ body{font: 15px 'Nanum Gothic','Malgun Gothic',Arial,sans-serif;}
   margin: 6px 0;
   transition: 0.4s;
 }
-.btn-open.close{position: absolute;top: 0;left: 250px;width: 50px;height: 50px;background-color: rgba(185,79,70,.8);padding: 12px 13px;}
+.btn-open.close{position: absolute;top: 0;left: 250px;width: 50px;height: 50px;background-color: rgba(185,79,70,.8);padding: 13px 13px;}
 /*.menuWrap{background: #b94f46;_height: 100%;}*/
 #navTop.close{background-color: none;}
 .change .bar1 {
