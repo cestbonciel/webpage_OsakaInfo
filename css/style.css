@@ -31,8 +31,8 @@
 .main_cmt a{display: block;text-align: center;width: 150px;border: 1px solid #fff;background: none;color: #fff;
 -ms-border-radius: 10px;border-radius: 10px;margin-top: 30px;line-height: 45px;transition:.3s}
 .main_cmt a:hover{background: #fff;color: #000;}*/
-#page2 div.onview{opacity:0;transition:.3s;}
-	#page2 div.onview.mactive{opacity:1;transform:translateX(100px);}
+
+	
 	/*slide pt*/
 	.slide .img-content{width: 100%;margin: 0 auto;}
 	.slide .main_cmt{margin-left: 0;position: relative;}
