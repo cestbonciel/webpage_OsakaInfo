@@ -30,6 +30,7 @@ body{font: 15px 'Nanum Gothic','Malgun Gothic',Arial,sans-serif;}
   transform: rotate(45deg) translate(0px, -5px);
 }
 
+#navTop .menuWrap {margin-bottom: 40px;}
 #navTop .menuWrap > ul:after{content:"";display: block;clear: both;}
 #navTop .menuWrap > ul{width: 130px;_height: 100px;margin: 0 auto;}
 #navTop .menuWrap > ul > li{height: 50px;line-height: 50px;}
@@ -38,3 +39,9 @@ body{font: 15px 'Nanum Gothic','Malgun Gothic',Arial,sans-serif;}
 #navTop .menuWrap > ul > li.active{border-bottom: 1px solid #9B9B9B;}
 #navTop .menuWrap > ul > li.active a{color: #fff;}
 
+#navTop>.sns-icon-wrap{padding: 40px;position: relative;}
+#navTop>.sns-icon-wrap>ul:after{content:"";display: block;clear: both;}
+#navTop>.sns-icon-wrap>ul li{float: left;}
+#navTop>.sns-icon-wrap>ul li:nth-child(2){margin: 0 20px;}
+#navTop>.sns-icon-wrap>ul li>.fab{font-size: 48px;}
+#navTop>.sns-icon-wrap>ul li>.kka-icon{position: absolute;top: 42px;display: block;width: 42px;height: 42px;background:url(../images/common/kka_icon.png) 0 0 no-repeat;}
